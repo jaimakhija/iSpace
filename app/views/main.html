@@ -1,0 +1,22 @@
+<div class="container" ng-controller="MainCtrl">
+  <h2>My Status</h2>
+  <form role="form" ng-submit="addStatus()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="newstatus" placeholder="Update Status" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Update">
+        </span>
+      </div>
+    </div>
+  
+
+
+  <p class="input-group"  ng-repeat="status in mystatus">
+    <input type="text" ng-model="status" class="form-control">
+    <span class="input-group-btn">
+      <button class="btn btn-danger" ng-click="removeStatus($index)" arai-label="Remove">X</button>
+    </span>
+  </p>
+</form>
+</div>
